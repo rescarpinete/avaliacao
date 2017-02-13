@@ -8,21 +8,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.consulta.cep.facade.ConsultaCepFacade;
+import com.consulta.cep.entity.Cep;
 import com.consulta.cep.json.CepJson;
 import com.consulta.cep.json.RespostaCepJson;
+import com.consulta.cep.repository.Ceps;
+import com.consulta.cep.services.ConsultaEnderecoServices;
 
 @Controller
 @RequestMapping("/endereco")
-public class ServicoEndereco {
+public class ServicoEndereco  {
 	
 	@Autowired
-	ConsultaCepFacade facade;
-	
+	ConsultaEnderecoServices consultaEnderecoServices;
+
 	@RequestMapping(value = {"/consulta/cep"}, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<RespostaCepJson> consultaFreteMock(@RequestBody CepJson cep){
-		RespostaCepJson respostaCepJson = facade.consultaFrete(cep);
+	public ResponseEntity<RespostaCepJson> consultaFrete(@RequestBody CepJson cep){
+		RespostaCepJson respostaCepJson = consultaEnderecoServices.consultaCepServices(cep);
 		return  ResponseEntity.ok(respostaCepJson);
+		
+	}
+	
+	@RequestMapping(value = {"/consulta/save"}, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<String> save(@RequestBody Cep cep){
+		String reult = consultaEnderecoServices.saveEndereco(cep);
+		return  ResponseEntity.ok(reult);
 		
 	}
 	

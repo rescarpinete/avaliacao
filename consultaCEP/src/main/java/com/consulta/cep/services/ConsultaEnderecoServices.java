@@ -8,6 +8,10 @@ public interface ConsultaEnderecoServices {
 	
 	RespostaCepJson consultaCepServices(CepJson cep);
 
-	String saveEndereco(Cep cep);
+	String salvarEndereco(Cep cep);
+
+	String editarEndereco(Long codigo, Cep cep);
+
+	String deletarEndereco(Long codigo);
 
 }

@@ -17,7 +17,7 @@ public class RespostaCepJson implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	
-	private List<CepImpJson> fretes;
+	private List<CepImpJson> enderecos;
 	
 	private String msg;
 

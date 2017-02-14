@@ -1,8 +1,8 @@
-  O Client(WebBrowser) digita na URL 
+  O Client(WebBrowser) digita na URL http://www.netshoes.com.br
     |
 	 ---->  HTTP(Protocolo) e WWW(internet) o browser interpreta essa informações e envia endereço para "Rede Internet".
 			|
-			 ----> Algum Hospedeiro(Server) expõe o cominho .com.br na internet que recebe uma chamada do Client.
+			 ----> Algum Hospedeiro(Server) expõe o cominho netshoes.com.br na internet que recebe uma chamada do Client.
 					O Server interpreta essa chamada URL, obtém o método que o Client esta chamando, por padrao metodo GET.
 					|
 				<----

@@ -1,5 +1,7 @@
 package com.consulta.cep.resource;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -28,7 +30,7 @@ public class ConsultaEnderecoResource  {
 	}
 	
 	@RequestMapping(value = {"/consulta/salvar"}, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<String> salvar(@RequestBody Cep cep){
+	public ResponseEntity<String> salvar(@RequestBody @Valid Cep cep){
 		String reult = consultaEnderecoServices.salvarEndereco(cep);
 		return  ResponseEntity.ok(reult);
 	}

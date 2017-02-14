@@ -1,0 +1,10 @@
+  O Client(WebBrowser) digita na URL 
+    |
+	 ---->  HTTP(Protocolo) e WWW(internet) o browser interpreta essa informações e envia endereço para "Rede Internet".
+			|
+			 ----> Algum Hospedeiro(Server) expõe o cominho .com.br na internet que recebe uma chamada do Client.
+					O Server interpreta essa chamada URL, obtém o método que o Client esta chamando, por padrao metodo GET.
+					|
+				<----
+				Responde para o Client nada menos que uma "String" de informações
+				o Client obtém essa informação e interpreta a "String" e transforma em pagina do conteúdo da Url digitada.

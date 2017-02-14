@@ -1,0 +1,18 @@
+Questão 1 , 2 
+
+ Utilizei framework Srping para realizar o teste.
+ Familiaridade e praticidade foram o criterios para efetuar o teste
+utilizando  Spring, juntamente com a arquitetura do Spring.
+ Utilizei o Maven para compilar a aplicação.
+ Utilizei o Lombok para otimizar tempo e codigo das entidades.
+ Recursos utilizandos so Spring.
+ - Spring Boot
+ - Spring JPA 
+ - Spring Hateos
+ - Spring DevTools
+ Banco de Dados H2 
+
+
+Considerações Questão 3.
+Apesar de conhecer as funções porem não utiliza-las.
+Acabei fazendo a atividade pesquisando na Internet.
